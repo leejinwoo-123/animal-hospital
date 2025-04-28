@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>병원소개</title>
+  <style>
+    @font-face {
+      font-family: preten;
+      src: url(//Users/dlwlsdn/Documents/코딩/Pretendard-1/web/static/woff/Pretendard-Medium.woff) format("woff");
+    }
+
+    html {
+      font-family: preten;
+    }
+
+    html,
+    header,
+    nav,
+    body,
+    ul,
+    li,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .thin {
+      font-weight: 100;
+    }
+
+    .Light {
+      font-weight: 300;
+    }
+
+    .regular {
+      font-weight: 400;
+    }
+
+    .med {
+      font-weight: 500;
+    }
+
+    .semib {
+      font-weight: 600;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .extb {
+      font-weight: 800;
+    }
+
+    header .imgdiv {
+      position: relative;
+      top: 10px;
+      left: 50px;
+    }
+
+    .logo1 {
+      width: 250px;
+    }
+
+    header nav div a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+
+    header {
+      width: 1920px;
+      height: 68px;
+      display: flex;
+    }
+
+    header nav {
+      display: flex;
+      position: relative;
+      left: 650px;
+      top: 25px;
+    }
+
+    header nav div .meun {
+      width: 100px;
+      border-right: 2px solid black;
+      padding: 0px 15px;
+    }
+
+    header nav div .meun0 {
+      width: 100px;
+      padding: 0px 15px;
+    }
+
+    .sec1 {
+      width: 1920px;
+      height: 1014px;
+      border: 0px solid;
+      background-image: url(sce1backimg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mainall {
+      display: flex;
+      width: 1500px;
+      margin: auto;
+      position: relative;
+      top: 170px;
+    }
+
+    .sec1 div .main {
+      font-size: 60px;
+      color: white;
+    }
+
+    .maindiv {
+      align-content: center;
+    }
+
+    .maindiv .main~.sub {
+      margin: 30px 0px;
+    }
+
+    .sec1 div .sub {
+      font-size: 25px;
+      color: white;
+    }
+
+    .subdiv {
+      width: 776px;
+      height: 680px;
+      border: 0px solid;
+      background-color: rgba(0, 0, 0, 0.363);
+      text-align: center;
+      align-content: center;
+      margin-left: 150px;
+    }
+
+    .subdiv .white {
+      color: white;
+    }
+
+    .subdiv .mint {
+      color: #22d3e2;
+    }
+
+    .subdiv .extb.mint {
+      font-size: 30px;
+    }
+
+    .subdiv .med.white {
+      font-size: 15px;
+      margin: 40px 0px;
+    }
+
+    .subdiv .med.mint {
+      font-size: 15px;
+    }
+
+    .sec2 {
+      width: 1920px;
+      height: 1186px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: white;
+    }
+
+    .sec2 .bold {
+      font-size: 26px;
+      width: 300px;
+      margin-bottom: 40px;
+    }
+
+    .sec2 .Light {
+      font-size: 13px;
+    }
+
+    .img1 {
+      width: 434px;
+      height: 794px;
+      background-image: url(img1back1.png);
+      margin: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: -60px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.504);
+    }
+
+    .img2 {
+      width: 434px;
+      height: 794px;
+      background-image: url(img2back1.png);
+      margin: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: 60px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.504);
+    }
+
+    .img3 {
+      width: 434px;
+      height: 794px;
+      background-image: url(img3back1.png);
+      margin: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: -60px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.504);
+    }
+
+    .img4 {
+      width: 434px;
+      height: 794px;
+      background-image: url(img4back1.png);
+      margin: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: 60px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.504);
+    }
+
+    .sec3 {
+      width: 1920px;
+      height: 889px;
+      background-image: url(sec3backimg.png);
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .sec3 .Light {
+      font-size: 17px;
+      margin: 10px 0px;
+    }
+
+    .sec3 .bold.px30 {
+      font-size: 30px;
+    }
+
+    .sec3 .bold {
+      font-size: 34px;
+    }
+
+    .sclall .scl {
+      width: 350px;
+      height: 350px;
+      border-radius: 1000px;
+      border: 3px solid #22d3e2;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      display: flex;
+      margin: 0px -20px;
+    }
+
+    .sclall {
+      display: flex;
+    }
+
+    .sec3 .bold.mmm {
+      margin-bottom: 20px;
+    }
+
+    footer .thin.px15 {
+      font-size: 15px;
+      margin-left: 50px;
+    }
+
+    footer {
+      width: 1920px;
+      height: 114px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer div img {
+      width: 300px;
+      margin-right: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="imgdiv">
+      <img src="logo.png" class="logo1" />
+    </div>
+    <nav>
+      <div><a href="#" class="med meun">온라인진료예약</a></div>
+      <div><a href="#" class="med meun">병원소개</a></div>
+      <div><a href="#" class="med meun">외과센터</a></div>
+      <div><a href="#" class="med meun">내과센터</a></div>
+      <div><a href="#" class="med meun">영상•검진 센터</a></div>
+      <div><a href="#" class="med meun">한방•재활 센터</a></div>
+      <div><a href="#" class="med meun">줄기세포치료</a></div>
+      <div><a href="#" class="med meun0">진료후기</a></div>
+    </nav>
+  </header>
+
+  <body>
+    <section class="sec1">
+      <div class="mainall">
+        <div class="maindiv">
+          <div class="extb main">
+            수술 잘 하는 동물병원,<br />
+            대한민국동물메디컬센터
+          </div>
+          <div class="med sub">
+            대한민국 최대 규모의 반려동물 종합 의료센터,<br />
+            큰마음동물메디컬센터입니다.<br />
+            <br />
+            반려동물과 반려가족 모두 만족하는<br />
+            최상의 의료서비스를 제공해 드릴 것을 약속 드립니다.
+          </div>
+        </div>
+        <div class="subdiv">
+          <div class="extb mint">
+            누구나 동등한 의료 서비스를<br />
+            ​받을 수 있어야 한다는 신념으로
+          </div>
+          <div class="med white">
+            대한민국동물메디컬센터는 2018년 1월, 부산 해운대에 개원한
+            국내최대규모의 반려동물 종합의료센터로 몸이 아픈 반<br />
+            려동물 친구들이 부산에서도 대학병원 수준의 장비와, 실력있는
+            의료진의 전문적인 진료서비스를 통해 모두가 높은<br />
+            퀄리티의 진료를 받아 볼 수 있도록 하기위해 설립되었습니다.<br />
+            <br />
+            반려동물의 동선을 언제 어디서나 배려할 수 있도록 설계된 센터건물은
+            4층 고양이동물메디컬센터, 한방·재활동물병원<br />
+            부터 5층 강아지동물메디컬센터, 8층 수술실까지 아이들이 받을 수
+            있는 스트레스를 최소화하기 위해 최적의 동선으로 <br />
+            건설되었습니다.<br />
+            <br />
+            실력있는 각 분야 전문의들의 협력을 통해 보다 체계적이고 전문적인
+            진료시스템을 구축하였으며, 최신 CT / MRI 장비를<br />
+            구비· 전문 영상판독의의 진단으로 더욱 정확하고 신속한 검진 결과를
+            받아볼 수 있습니다.<br />
+            <br />
+            부산 최대규모의 독립된 한방재활센터를 운영하며, 수술 케이스부터
+            비수술 케이스까지 다양한 경험을 바탕으로​ 성장기<br />
+            부터 노령기까지의 아이들에게 최선의 진단 및 안전한 치료를 제공하고
+            있습니다. <br />
+            <br />
+            국내 최대 규모의 메디컬센터이지만 동네병원처럼 모두가 쉽게 드나들
+            수 있는 문턱이 낮은 동물병원이 되기 위해 우수한<br />
+            분과별 전문의들이 환자의 특성에 맞게 진료에 임하는 따뜻한 병원을
+            추구하고 있습니다.<br />
+            <br />
+            모든 반려동물 친구들과, 그의 반려가족이 마음 편히 행복하게 찾아 올
+            수 있는 동물병원이 되기 위해 환자가 건강하고 행<br />
+            복해질 때까지 내 가족처럼 함께하는 큰마음이 되겠습니다.<br />
+            <br />
+            감사합니다.
+          </div>
+          <div class="med mint">대한민국동물메디컬센터 일동</div>
+        </div>
+      </div>
+    </section>
+    <section class="sec2">
+      <div class="img1">
+        <div class="bold">풍부한 경험의 전문 의료진</div>
+        <div class="Light">
+          아무리 좋은 장비라도 실력이 뒷받침되지<br />
+          않으면 소용이 없습니다.<br />
+          대한민국동물메디컬센터는 내과, 외과, 영상의학과 등<br />
+          각 분야의 석박사 의료진이<br />
+          ​풍부한 경험과 노하우로 ​전문성 높은<br />
+          최상의 의료서비스를 제공합니다
+        </div>
+      </div>
+      <div class="img2">
+        <div class="bold">안정적인 회복을 위한 재활 협진</div>
+        <div class="Light">
+          모든 수술은 수술 후 관리가 무엇보다 중요합니다.<br />
+          외과/재활의학과의 체계적인 협진과 꾸준한 모니터링으로<br />
+          안정적이고 빠른 회복이 가능하도록 합니다.
+        </div>
+      </div>
+      <div class="img3">
+        <div class="bold">오차없는 첨단 정밀검사 시스템</div>
+        <div class="Light">
+          정확한 검사와 빠른 회복을 위해 검사, 수술 장비에 대한<br />
+          투자를 아끼지 않았습니다.<br />
+          대학병원 급 MRI · CT와 안전한 동물 전용 마취, 첨단 수술 장비가<br />
+          구비되어 있어 안정적인 치료 결과를 만나실 수 있습니다.
+        </div>
+      </div>
+      <div class="img4">
+        <div class="bold">끊임없는 연구</div>
+        <div class="Light">
+          큰마음동물메디컬센터는 반려동물이 보다 건강한 삶을<br />
+          누릴 수 있도록,보다 나은 치료방향을 제시해드리기 위해<br />
+          끊임없이연구하며 발전을 위해 노력하겠습니다.
+        </div>
+      </div>
+    </section>
+    <section class="sec3">
+      <div class="Light">KOREA Philosophy</div>
+      <div class="bold mmm">
+        모두가 즐거운 동물병원 가는 길,<br />
+        ​대한민국동물메디컬센터
+      </div>
+      <div class="sclall">
+        <div class="scl">
+          <div class="bold px30">양심적인 진료</div>
+          <div class="Light">
+            반려동물을 사랑하는<br />
+            보호자이자 수의사로서<br />
+            ​필요한 검사와 진단만을<br />
+            하겠습니다.
+          </div>
+        </div>
+
+        <div class="scl">
+          <div class="bold px30">행복을 위한 고민</div>
+          <div class="Light">
+            반려동물이 삶의 질을 유지하며<br />
+            행복한 일상을 보낼 수<br />
+            있도록 보호자님과<br />
+            함께 고민하겠습니다.
+          </div>
+        </div>
+
+        <div class="scl">
+          <div class="bold px30">선택에 대한 존중</div>
+          <div class="Light">
+            환자 아이를 가장 사랑하는<br />
+            보호자님의 선택을<br />
+            지지하며 존중합니다.
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <div class="thin px15">
+      큰마음동물메디컬센터 · 대표자 김현수 ·사업자번호 542-15-00755
+      ·부산광역시 해운대구 해운대해변로 357번길 17 ·문의 051-710-2004<br />
+      <br />
+      Copyright ⓒ 2021 KMAUM AMC. All Rights Reserved.
+    </div>
+    <div>
+      <img src="logo.png" />
+    </div>
+  </footer>
+</body>
+
+</html>

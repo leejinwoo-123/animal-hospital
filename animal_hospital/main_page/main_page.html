@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메인페이지</title>
+  <style>
+    @font-face {
+      font-family: preten;
+      src: url(//Users/dlwlsdn/Documents/코딩/Pretendard-1/web/static/woff/Pretendard-Medium.woff) format("woff");
+    }
+
+    html {
+      font-family: preten;
+    }
+
+    html,
+    body,
+    ul,
+    li,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .headerbox {
+      border: 0px solid;
+      background-color: rgba(0, 0, 0, 0.475);
+
+      width: 1920px;
+      height: 65px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .logo1 {
+      position: relative;
+      top: -15px;
+      left: 840px;
+    }
+
+    .headerbox .bener a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      top: 22px;
+      margin: 0px 10px;
+    }
+
+    .headerbox .bener3 {
+      float: right;
+    }
+
+    .headerbox .bener {
+      margin: 0px 10px;
+      font-size: 20px;
+    }
+
+    .Light {
+      font-weight: 300;
+    }
+
+    .regular {
+      font-weight: 400;
+    }
+
+    .med {
+      font-weight: 500;
+    }
+
+    .semib {
+      font-weight: 600;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .extb {
+      font-weight: 800;
+    }
+
+    .day365 {
+      font-size: 30px;
+    }
+
+    .kor {
+      font-size: 55px;
+    }
+
+    .kor2 {
+      font-size: 60px;
+    }
+
+    .sec1 {
+      width: 1920px;
+      height: 1080px;
+      border: 0px solid black;
+      background-repeat: no-repeat;
+      background-image: url("sec1backimg.png");
+      position: relative;
+      top: -65px;
+    }
+
+    .part1 {
+      text-align: center;
+      color: white;
+      position: relative;
+      top: 400px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .meun .scl1 a {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .meun .scl1 {
+      display: inline-block;
+      width: 130px;
+      padding: 20px;
+      border-radius: 60px;
+      background-color: rgba(0, 0, 0, 0.329);
+      text-align: center;
+      position: relative;
+      top: 450px;
+      left: 475px;
+      margin: 0px 10px;
+    }
+
+    .sec2 {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 50px;
+      width: 1920px;
+      height: 1080px;
+    }
+
+    .img1 {
+      width: 540px;
+      height: 912px;
+      border: 0px solid black;
+      background-image: url(img1back.png);
+      text-align: center;
+      color: white;
+      margin-right: 80px;
+    }
+
+    .tnwns {
+      font-size: 25px;
+      border-bottom: 2px solid rgb(255, 255, 255);
+      width: 300px;
+      height: 120px;
+      position: relative;
+      top: 320px;
+      left: 120px;
+    }
+
+    .tndml {
+      font-size: 16;
+      position: relative;
+      top: 350px;
+    }
+
+    .img2 {
+      width: 540px;
+      height: 912px;
+      border: 0px solid black;
+      background-image: url(img2back.png);
+      text-align: center;
+      color: white;
+    }
+
+    .img3 {
+      width: 540px;
+      height: 912px;
+      border: 0px solid black;
+      background-image: url(img3back.png);
+      text-align: center;
+      color: white;
+      margin-left: 80px;
+    }
+
+    .fast,
+    .fast a {
+      color: white;
+    }
+
+    .sec3 {
+      width: 1920px;
+      height: 1080px;
+    }
+
+    .qksfu {
+      font-size: 57px;
+      float: left;
+    }
+
+    .tjsxor {
+      font-size: 29px;
+      position: relative;
+      top: 95px;
+      left: 60px;
+    }
+
+    .center {
+      margin: 300px 470px;
+    }
+
+    .fast {
+      width: 300px;
+      height: 300px;
+      border-radius: 30px;
+      background-color: #22d3e2;
+      align-content: center;
+      text-align: center;
+    }
+
+    .fastm {
+      width: 1920;
+      display: flex;
+      justify-content: center;
+    }
+
+    .box2 {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    .fast div {
+      width: 100px;
+      padding: 10px 0px;
+      border-radius: 50px;
+      border: 1px solid white;
+      margin: 15px auto;
+    }
+
+    .fast p {
+      margin: 15px auto;
+    }
+
+    .fast img {
+      margin: 15px;
+    }
+
+    .sec4 {
+      width: 1920px;
+      height: 1080px;
+      text-align: center;
+    }
+
+    .rhdwl {
+      font-size: 50px;
+    }
+
+    .simg {
+      width: 250px;
+      vertical-align: middle;
+    }
+
+    .bimg {
+      vertical-align: middle;
+    }
+
+    .manyimg {
+      margin: 50px 0px;
+    }
+
+    .linklogo img {
+      margin: 0px 10px;
+    }
+
+    .linklogo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .sec5 {
+      width: 1920px;
+      height: 560px;
+      background-color: #383838;
+      display: flex;
+    }
+
+    .sec5 img {
+      width: 1040px;
+    }
+
+    .footer {
+      color: white;
+      margin: auto 100px;
+    }
+
+    .footer div .bold {
+      width: 300px;
+      font-size: 50px;
+    }
+
+    .footer div .semib {
+      font-size: 40px;
+      color: #22d3e2;
+    }
+
+    .footer .Light li {
+      font-size: 25px;
+    }
+
+    .footer .med {
+      font-size: 25px;
+    }
+
+    .footer div {
+      display: flex;
+      margin: 20px 0px;
+    }
+  </style>
+</head>
+<header>
+  <div class="headerbox">
+    <div class="bener">
+      <a href="#" class="bener1">센터안내</a>
+      <a href="#" class="bener2">예약문의</a>
+      <a href="#" class="bener3">오시는길</a>
+    </div>
+    <img src="logo2.png" class="logo1" />
+  </div>
+</header>
+
+<body>
+  <section class="sec1">
+    <div class="part1">
+      <div class="day365 regular">365일 동물만 생각하는 이곳,</div>
+      <div class="kor semib">대한민국 최대 규모</div>
+      <div class="kor2 extb">대한민국동물메디컬센터 입니다.</div>
+    </div>
+    <div>
+      <ul class="meun">
+        <li class="scl1"><a href="#">외과센터</a></li>
+        <li class="scl1"><a href="#">내과센터</a></li>
+        <li class="scl1"><a href="#">영상•검진 센터</a></li>
+        <li class="scl1"><a href="#">한방•재활 센터</a></li>
+        <li class="scl1"><a href="#">줄기세포치료</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="sec2">
+    <div class="img1">
+      <div class="extb tnwns">
+        8천건의<br />
+        풍부한 외과수술 실적,<br />
+        수준높은 외과수술 전문
+      </div>
+      <div class="Light tndml">
+        수의외과학 박사 출신의 의료진이<br />
+        고난이도 정형수술, 재수술 등 수술을 집도하고 있으며,<br />
+        개원 후 8천건 이상의 외과수술 실적을 달성하며<br />
+        의료진의 실력, 장비의 안전성, 안전기준 이상의 수술 환경,<br />
+        환자와 보호자를 위한 정직한 진료를 인정받고 있습니다.
+      </div>
+    </div>
+    <div class="img2">
+      <div class="extb tnwns">
+        부산경남 최초,<br />
+        CVA&CCRT동시부유<br />
+        제활한방센터
+      </div>
+      <div class="Light tndml">
+        부산경남 최초로 수의한방전문자격CVA와<br />
+        수의재활전문의 CCRT를 동시에 보유한<br />
+        전문의료진이 함께합니다.<br />
+        수술 후 안정적인 회복을 위한 재활의학 협진과<br />
+        수술이 어려운 노령동물, 현대양방 의학으로<br />
+        접근이 힘든 질환을 한의학적으로 접근해<br />
+        ​효과적인 치료로 도와드리고 있습니다.
+      </div>
+    </div>
+    <div class="img3">
+      <div class="extb tnwns">
+        안전한 수술의 첫 걸음,<br />
+        CT/MRI 영상센터
+      </div>
+      <div class="Light tndml">
+        대학병원급 첨단 검사 장비로<br />
+        반려동물의 정확한 건상상태를 평가하고<br />
+        다향한 질환의 위험을 종합적으로 진단해<br />
+        최상의 치료 결과를 자랑합니다.
+      </div>
+    </div>
+  </section>
+  <section class="sec3">
+    <div class="center">
+      <div class="extb qksfu">
+        반려동물과의 건강하고<br />
+        행복한 동행을 위해<br />
+        함께 고민합니다
+      </div>
+      <div class="med tjsxor">
+        대한민국동물메디컬센터는<br />
+        환자 아이를 가장 사랑하는 보호자님의<br />
+        선택을 지지하며 존중하겠습니다.
+      </div>
+    </div>
+    <div class="fastm">
+      <div class="fast box1">
+        <img src="imgscr1.png" class="imgsrc1" width="60px" height="100px" />
+        <p class="bold">의료진 소개</p>
+        <div><a href="#" class="med">더보기</a></div>
+      </div>
+      <div class="fast box2">
+        <img src="imgsrc2.png" class="imgsrc2" width="80px" height="100px" />
+        <p class="bold">간편 예약</p>
+        <div><a href="#" class="med">더보기</a></div>
+      </div>
+      <div class="fast box3">
+        <img src="imgsrc3.png" class="imgsrc3" width="80px" height="100px" />
+        <p class="bold">시설 안내</p>
+        <div><a href="#" class="med">더보기</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec4">
+    <img src="logo.png" />
+    <div class="bold rhdwl">공지사항</div>
+    <div class="manyimg">
+      <img class="simg" src="rhdwl1.png" />
+      <img class="simg" src="rhdwl2.png" />
+      <img class="simg" src="rhdwl3.png" />
+      <img class="bimg" src="rhdwl4.png" />
+      <img class="simg" src="rhdwl5.png" />
+      <img class="simg" src="rhdwl6.jpg" />
+      <img class="simg" src="rhdwl7.png" />
+    </div>
+    <div class="linklogo">
+      <img src="naverblog.png" /><img src="instar.png" class="instar" /><img src="youtube.png" />
+    </div>
+  </section>
+  <section class="sec5">
+    <img src="map.png" />
+    <div class="footer">
+      <div>
+        <div class="bold">대표번호</div>
+        <div class="semib">051-710-2004</div>
+      </div>
+      <div>
+        <div class="bold">진료시간</div>
+        <ul class="Light">
+          <li>월~금</li>
+          <li>AM 09:00~PM 19:00</li>
+          <li>토~일</li>
+          <li>AM 09:00~PM 18:00</li>
+          <li>점심시간</li>
+          <li>PM 12:00~PM 14:00</li>
+        </ul>
+      </div>
+      <div>
+        <div class="bold">오시는길</div>
+        <div class="med">
+          : 부산광역시 해운대구 해운대해변로<br />
+          357번길, 17 (대한민국동물메디컬센터)
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>진료예약안내</title>
+  <style>
+    @font-face {
+      font-family: preten;
+      src: url(//Users/dlwlsdn/Documents/코딩/Pretendard-1/web/static/woff/Pretendard-Medium.woff) format("woff");
+    }
+
+    html {
+      font-family: preten;
+    }
+
+    html,
+    header,
+    nav,
+    body,
+    ul,
+    li,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .thin {
+      font-weight: 100;
+    }
+
+    .Light {
+      font-weight: 300;
+    }
+
+    .regular {
+      font-weight: 400;
+    }
+
+    .med {
+      font-weight: 500;
+    }
+
+    .semib {
+      font-weight: 600;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .extb {
+      font-weight: 800;
+    }
+
+    header {
+      position: relative;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header .bener {
+      width: 1920px;
+      height: 70px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      z-index: 999;
+    }
+
+    header .bener img {
+      width: 250px;
+      margin-right: 550px;
+    }
+
+    header .bener nav {
+      display: flex;
+    }
+
+    header .bener nav div a {
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    header .bener nav div .side {
+      width: 100px;
+      border-right: 2px solid black;
+      padding-right: 15px;
+    }
+
+    header .none {
+      position: absolute;
+      width: 1920px;
+      height: 250px;
+      background-color: rgba(255, 255, 255, 0.488);
+      transition: all 0.5s;
+      top: -180px;
+    }
+
+    header .none nav {
+      display: flex;
+      justify-content: right;
+      margin-right: 25px;
+    }
+
+    header .none nav ul li {
+      list-style-type: none;
+      margin-left: 37px;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    header .none nav ul {
+      margin-top: 20px;
+    }
+
+    header .bener:hover+.none {
+      top: 70px;
+    }
+
+    .sec1 {
+      width: 1920px;
+      height: 708px;
+      background-image: url(sce1back.png);
+      background-position: center;
+      background-size: cover;
+      padding-top: 70px;
+      text-align: center;
+      align-content: center;
+    }
+
+    .sec1 .maint {
+      color: white;
+    }
+
+    .sec1 .maint .bold.px100 {
+      font-size: 100px;
+      margin-bottom: 20px;
+    }
+
+    .sec1 .maint .med.px25 {
+      font-size: 25px;
+    }
+
+    .sec2 {
+      width: 1920px;
+      height: 745px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sec2 div .box img {
+      position: relative;
+      top: 60px;
+    }
+
+    .sec2 div .px40 {
+      font-size: 40px;
+      width: 280px;
+      border-bottom: 2px solid black;
+      margin: 0px auto;
+      position: relative;
+      top: 120px;
+    }
+
+    .sec2 div .med.px20.ccc {
+      font-size: 20px;
+
+      width: 300px;
+      margin: 0px auto;
+      position: relative;
+      top: 150px;
+    }
+
+    .sec2 div .med.px20 {
+      color: black;
+    }
+
+    .sec2 .box {
+      width: 340px;
+      height: 495px;
+      border: 5px solid gray;
+      text-align: center;
+    }
+
+    .sec2 .box.centerbox {
+      margin: 0px 25px;
+    }
+
+    .sec2 .butten {
+      border-radius: 50px;
+      width: 130px;
+      height: 28px;
+      background-color: gray;
+      margin: 0px auto;
+      align-content: center;
+      position: relative;
+      top: 200px;
+    }
+
+    .sec3 {
+      width: 1920px;
+      height: 747px;
+      background-color: #c9fbff;
+      text-align: center;
+      align-content: center;
+    }
+
+    .px40 {
+      font-size: 40px;
+    }
+
+    .px30 {
+      font-size: 30px;
+    }
+
+    .px20 {
+      font-size: 20px;
+    }
+
+    .sec3 .bold.px40 {
+      margin: 50px auto;
+    }
+
+    .sec3 .Light.px20 {
+      margin-top: 30px;
+    }
+
+    .sec4 {
+      width: 1920px;
+      height: 747px;
+      align-content: center;
+      margin: 0 auto;
+    }
+
+    .sec4 .img {
+      display: flex;
+      justify-content: center;
+    }
+
+    .sec4 div a {
+      color: black;
+    }
+
+    .px27 {
+      font-size: 27px;
+    }
+
+    .sec4 .box {
+      width: 202px;
+      height: 54px;
+      border-radius: 50px;
+      border: 2px solid black;
+      text-align: center;
+      align-content: center;
+      margin: 0px auto;
+    }
+
+    .sec4 .sec4_2 {
+      width: 1920px;
+
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .sec4 .ul {
+      display: flex;
+      justify-content: center;
+      width: 1920px;
+    }
+
+    footer .thin.px15 {
+      font-size: 15px;
+      margin-left: 50px;
+    }
+
+    footer {
+      width: 1920px;
+      height: 114px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer div img {
+      width: 300px;
+      margin-right: 50px;
+    }
+
+    .none:hover {
+      top: 70px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="bener">
+      <div><img src="logo.png" /></div>
+      <nav>
+        <div><a href="#" class="med side">온라인진료예약</a></div>
+        <div><a href="#" class="med side">병원소개</a></div>
+        <div><a href="#" class="med side">외과센터</a></div>
+        <div><a href="#" class="med side">내과센터</a></div>
+        <div><a href="#" class="med side">영상•검진 센터</a></div>
+        <div><a href="#" class="med side">한방•재활 센터</a></div>
+        <div><a href="#" class="med side">줄기세포치료</a></div>
+        <div><a href="#" class="med">진료후기</a></div>
+      </nav>
+    </div>
+    <div class="none">
+      <nav class="regular">
+        <ul>
+          <li>온라인진료예약</li>
+          <li>온라인진료예약</li>
+          <li>온라인진료예약</li>
+        </ul>
+        <ul>
+          <li>병원소개</li>
+          <li>병원소개</li>
+          <li>병원소개</li>
+        </ul>
+        <ul>
+          <li>외과센터</li>
+          <li>외과센터</li>
+          <li>외과센터</li>
+        </ul>
+        <ul>
+          <li>내과센터</li>
+          <li>내과센터</li>
+          <li>내과센터</li>
+        </ul>
+        <ul>
+          <li>영상•검진 센터</li>
+          <li>영상•검진 센터</li>
+          <li>영상•검진 센터</li>
+        </ul>
+        <ul>
+          <li>한방•재활 센터</li>
+          <li>한방•재활 센터</li>
+          <li>한방•재활 센터</li>
+        </ul>
+        <ul>
+          <li>줄기세포치료</li>
+          <li>줄기세포치료</li>
+          <li>줄기세포치료</li>
+        </ul>
+        <ul>
+          <li>진료후기</li>
+          <li>진료후기</li>
+          <li>진료후기</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="secall">
+    <section class="sec1">
+      <div class="maint">
+        <div class="bold px100">진료 예약 안내</div>
+        <div class="med px25">
+          원활한 진료와 짧은 대기시간츨 위해 예약환자 우선진료를 진행하고
+          있습니다.
+        </div>
+      </div>
+    </section>
+    <section class="sec2">
+      <div>
+        <div class="box">
+          <img src="resever.png" />
+          <div class="bold px40">온라인 진료 예약</div>
+          <div class="med px20 ccc">
+            진료예약을 원하시는 경우
+            <br />
+            <br />
+          </div>
+          <div class="butten">
+            <a href="#" class="med px20">진료예약</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="box centerbox">
+          <img src="consultation.png" />
+          <div class="bold px40">입원환자 상담</div>
+          <div class="med px20 ccc">
+            입원환자 상태체크를<br />
+            원하시는 경우
+          </div>
+          <div class="butten"><a href="#" class="med px20">진료예약</a></div>
+        </div>
+      </div>
+      <div>
+        <div class="box">
+          <img src="orinatal.png" />
+          <div class="bold px40">한방•재활 상담</div>
+          <div class="med px20 ccc">
+            한방•재활동물병원<br />
+            진료예약을 원하시는 경우
+          </div>
+          <div class="butten"><a href="#" class="med px20">진료예약</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="sec3">
+      <div>
+        <div>
+          <img src="clook.png" />
+        </div>
+        <div class="bold px40">진료시간 안내</div>
+        <div class="med px30">
+          <div>
+            <div>평일</div>
+            <div>AM 09:00~PM 19:00</div>
+          </div>
+          <div>
+            <div>주말</div>
+            <div>AM 09:00~PM 18:00</div>
+          </div>
+        </div>
+        <div class="Light px20">
+          <div>접수시간 : 진료마감시간 30분 전</div>
+          <div>(평일 18:30 - 주말 및 공휴일 17:30)</div>
+        </div>
+      </div>
+    </section>
+    <section class="sec4">
+      <div class="img">
+        <img src="phone.png" />
+      </div>
+      <div class="sec4_2">
+        <div class="bold px40">상담예약 안내</div>
+        <div class="bold px40">051.710.2004</div>
+        <div class="box"><a href="#" class="med px27">전화상담</a></div>
+      </div>
+      <div class="ul">
+        <ul class="Light px20">
+          <li>
+            원활한 진료예약을 위해 내원 가능한 일자를 정확히 확인하시고 예약해
+            주시길 바랍니다.
+          </li>
+          <li>
+            예약 진료 없이 내원하실 경우, 원내 상황에 따라 대기시간이 발생할
+            수 있습니다.
+          </li>
+          <li>
+            예약 변경 및 취소를 진행하실 경우, 진료 1일전까지 꼭 연락주시기
+            바랍니다.
+          </li>
+          <li>
+            상담시간 : 평일 09:00 ~ 19:00 / 주말 및 공휴일 09:00 ~ 18:00
+          </li>
+          <li>
+            접수시간 : 진료마감시간 30분 전 / 평일 18:30 - 주말 및 공휴일
+            17:30
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="thin px15">
+      큰마음동물메디컬센터 · 대표자 김현수 ·사업자번호 542-15-00755
+      ·부산광역시 해운대구 해운대해변로 357번길 17 ·문의 051-710-2004<br />
+      <br />
+      Copyright ⓒ 2021 KMAUM AMC. All Rights Reserved.
+    </div>
+    <div>
+      <img src="logo.png" />
+    </div>
+  </footer>
+</body>
+
+</html>
